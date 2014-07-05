@@ -79,6 +79,12 @@
     <Compile Include="Excluir.Designer.cs">
       <DependentUpon>Excluir.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procura.Designer.cs">
+      <DependentUpon>Procura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procurar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Excluir.resx">
       <DependentUpon>Excluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procura.resx">
+      <DependentUpon>Procura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inserir.resx">
       <DependentUpon>Inserir.cs</DependentUpon>

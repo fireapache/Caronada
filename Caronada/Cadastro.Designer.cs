@@ -331,6 +331,7 @@
             this.Controls.Add(this.Caroneiro);
             this.Controls.Add(this.RG);
             this.Name = "Cadastro";
+            this.ShowIcon = false;
             this.Text = "Cadastro";
             this.Load += new System.EventHandler(this.Cadastro_Load);
             this.ResumeLayout(false);
