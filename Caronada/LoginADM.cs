@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Caronada
 {
-    public partial class Form1 : Form
+    public partial class LoginADM : Form
     {
-        public Form1()
+        public LoginADM()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Opcoes op = new Opcoes();
+            Opções op = new Opções();
             this.Hide();
             op.Show();
         }

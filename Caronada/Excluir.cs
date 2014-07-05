@@ -29,7 +29,7 @@ namespace Caronada
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Opcoes op = new Opcoes();
+            Opções op = new Opções();
             this.Close();
             op.Show();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Caronada
 {
-    public partial class Opcoes : Form
+    public partial class Opções : Form
     {
-        public Opcoes()
+        public Opções()
         {
             InitializeComponent();
         }
