@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Caronada</RootNamespace>
-    <AssemblyName>Iniciar</AssemblyName>
+    <AssemblyName>exe</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -32,7 +32,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\</OutputPath>
+    <OutputPath>..\..\..\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -67,61 +67,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CaronadaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro.Designer.cs">
-      <DependentUpon>Cadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Excluir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Excluir.Designer.cs">
-      <DependentUpon>Excluir.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procurar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procurar.Designer.cs">
-      <DependentUpon>Procurar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inserir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inserir.Designer.cs">
-      <DependentUpon>Inserir.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Opcoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Opcoes.Designer.cs">
-      <DependentUpon>Opcoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginADM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginADM.Designer.cs">
-      <DependentUpon>LoginADM.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cadastro.resx">
-      <DependentUpon>Cadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Excluir.resx">
-      <DependentUpon>Excluir.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inserir.resx">
-      <DependentUpon>Inserir.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Opcoes.resx">
-      <DependentUpon>Opcoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginADM.resx">
-      <DependentUpon>LoginADM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procurar.resx">
-      <DependentUpon>Procurar.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
