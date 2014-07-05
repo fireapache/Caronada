@@ -14,9 +14,18 @@ namespace Caronada
 {
     public partial class LoginADM : Form
     {
+        private static Opções opções;
+        private static Procurar procurar;
+        private static Procura procura;
+        private static Inserir inserir;
+        private static Excluir excluir;
+        private static Cadastro cadastro;
+
         public LoginADM()
         {
             InitializeComponent();
+            initializeForms();
+            hideForms();
         }
 
         public static string dbConString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Caronada.mdf;Integrated Security=True;Connect Timeout=30";
@@ -25,9 +34,8 @@ namespace Caronada
         {
             if (testarADM())
             {
-                Opções op = new Opções();
+                showOpções();
                 this.Hide();
-                op.Show();
             }
             else
             {
@@ -84,6 +92,62 @@ namespace Caronada
             sqlCon.Close();
 
             return loginMatch;
+        }
+
+        private static void initializeForms()
+        {
+            opções = new Opções();
+            procurar = new Procurar();
+            procura = new Procura();
+            inserir = new Inserir();
+            excluir = new Excluir();
+            cadastro = new Cadastro();
+        }
+
+        private static void hideForms()
+        {
+            opções.Hide();
+            procurar.Hide();
+            procura.Hide();
+            inserir.Hide();
+            excluir.Hide();
+            cadastro.Hide();
+        }
+
+        public static void showOpções()
+        {
+            hideForms();
+            opções.Show();
+        }
+
+        public static void showProcurar()
+        {
+            hideForms();
+            procurar.Show();
+        }
+
+        public static void showProcura()
+        {
+            hideForms();
+            procura.Show();
+        }
+
+        public static void showInserir()
+        {
+            hideForms();
+            inserir.Show();
+        }
+
+        public static void showExcluir()
+        {
+            hideForms();
+            excluir.Show();
+        }
+
+        public static void showCadastro()
+        {
+            hideForms();
+            cadastro.Show();
         }
     }
 }
