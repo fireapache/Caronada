@@ -32,6 +32,17 @@ namespace Caronada
 
             lbPeso.Hide();
             lbAltura.Hide();
+
+            lbUsuárioRG.Show();
+            tbUsuárioRG.Show();
+
+            tbRG.Enabled = false;
+            tbNome.Enabled = false;
+            dateNascimento.Enabled = false;
+            timeHoraIda.Enabled = false;
+            timeHoraVolta.Enabled = false;
+            tbRegião.Enabled = false;
+            tbContato.Enabled = false;
         }
 
         private void rdCarona_CheckedChanged(object sender, EventArgs e)
@@ -49,6 +60,17 @@ namespace Caronada
             lbTipoCarro.Hide();
             lbPlaca.Hide();
             lbCaronas.Hide();
+
+            lbUsuárioRG.Show();
+            tbUsuárioRG.Show();
+
+            tbRG.Enabled = false;
+            tbNome.Enabled = false;
+            dateNascimento.Enabled = false;
+            timeHoraIda.Enabled = false;
+            timeHoraVolta.Enabled = false;
+            tbRegião.Enabled = false;
+            tbContato.Enabled = false;
         }
 
         private void rdUsuário_CheckedChanged(object sender, EventArgs e)
@@ -64,6 +86,17 @@ namespace Caronada
             lbCaronas.Hide();
             lbPeso.Hide();
             lbAltura.Hide();
+
+            lbUsuárioRG.Hide();
+            tbUsuárioRG.Hide();
+
+            tbRG.Enabled = true;
+            tbNome.Enabled = true;
+            dateNascimento.Enabled = true;
+            timeHoraIda.Enabled = true;
+            timeHoraVolta.Enabled = true;
+            tbRegião.Enabled = true;
+            tbContato.Enabled = true;
         }
 
         private void Cadastro_FormClosed(object sender, FormClosedEventArgs e)
