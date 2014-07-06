@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Caronada
 {
@@ -116,7 +117,24 @@ namespace Caronada
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, "Ainda não foi implementado!");
+            if (rdUsuário.Checked) cadastrarUsuário();
+            else if (rdCarona.Checked) cadastrarCarona();
+            else cadastrarCaroneiro();
+        }
+
+        private void cadastrarUsuário()
+        {
+            MessageBox.Show("Cadastro de Usuário.");
+        }
+
+        private void cadastrarCarona()
+        {
+            MessageBox.Show("Cadastro de Carona.");
+        }
+
+        private void cadastrarCaroneiro()
+        {
+            MessageBox.Show("Cadastro de Caroneiro.");
         }
     }
 }
