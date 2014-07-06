@@ -16,145 +16,74 @@ namespace Caronada
         {
             InitializeComponent();
         }
-        int i=1;
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void rdCaroneiro_CheckedChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != "NOME")
-            {
-                progressBar1.Value = i;
-                i = i + 1;
-            }
-        }
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Web_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cadastro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void Caroneiro_CheckedChanged(object sender, EventArgs e)
-        {
-            progressBar1.Maximum = 7;
-            textBox2.Show();
+            tbTipoCarro.Show();
             textBox3.Show();
-            textBox4.Show();
+            nudCaronas.Show();
 
-            label5.Show();
-            label6.Show();
-            label7.Show();
+            nudPeso.Hide();
+            nudAltura.Hide();
 
-            label8.Hide();
-            label9.Hide();
+            lbTipoCarro.Show();
+            lbPlaca.Show();
+            lbCaronas.Show();
+
+            lbPeso.Hide();
+            lbAltura.Hide();
         }
 
-        private void Carona_CheckedChanged(object sender, EventArgs e)
+        private void rdCarona_CheckedChanged(object sender, EventArgs e)
         {
-            progressBar1.Maximum = 6;
-            textBox2.Hide();
+            tbTipoCarro.Hide();
             textBox3.Hide();
-            textBox4.Hide();
-            textBox5.Show();
-            textBox6.Show();
-            label8.Show();
-            label9.Show();
+            nudCaronas.Hide();
 
-            label5.Hide();
-            label6.Hide();
-            label7.Hide();
+            nudPeso.Show();
+            nudAltura.Show();
+
+            lbPeso.Show();
+            lbAltura.Show();
+
+            lbTipoCarro.Hide();
+            lbPlaca.Hide();
+            lbCaronas.Hide();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void rdUsuário_CheckedChanged(object sender, EventArgs e)
         {
-            progressBar1.Maximum = 4;
-            textBox2.Hide();
+            tbTipoCarro.Hide();
             textBox3.Hide();
-            textBox4.Hide();
-            textBox5.Hide();
-            textBox6.Hide();
+            nudCaronas.Hide();
+            nudPeso.Hide();
+            nudAltura.Hide();
 
-            label5.Hide();
-            label6.Hide();
-            label7.Hide();
-            label8.Hide();
-            label9.Hide();
+            lbTipoCarro.Hide();
+            lbPlaca.Hide();
+            lbCaronas.Hide();
+            lbPeso.Hide();
+            lbAltura.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Cadastro_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show(this, "Cadastrado com Sucesso!!");
+            Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Opções op = new Opções();
-            this.Hide();
-            op.Show();
+            LoginADM.showOpções();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Application.Exit();
         }
 
-        private void RG_TextChanged(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //if(e.Enter == Keys.Enter)//Não ta pegando o enter
-            //{
-                //progressBar1.Value = i;
-                //i = i + 1;
-            //}
-        }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            if (dateTimePicker1.Text != "9999999999999999999")
-            {
-                progressBar1.Value = i;
-                i = i + 1;
-            }
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-            if (RG.Text != "PESO?")
-            {
-                progressBar1.Value = i;
-                i = i + 1;
-            }
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            if (RG.Text != "ALTURA?")
-            {
-                progressBar1.Value = i;
-                i = i + 1;
-            }
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            if (RG.Text != "MAX_CARONAS")
-            {
-                progressBar1.Value = i;
-                i = i + 1;
-            }
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            MessageBox.Show(this, "Ainda não foi implementado!");
         }
     }
 }
