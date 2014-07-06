@@ -21,7 +21,7 @@ namespace Caronada
         private void rdCaroneiro_CheckedChanged(object sender, EventArgs e)
         {
             tbTipoCarro.Show();
-            textBox3.Show();
+            tbPlaca.Show();
             nudCaronas.Show();
 
             nudPeso.Hide();
@@ -42,14 +42,14 @@ namespace Caronada
             dateNascimento.Enabled = false;
             timeHoraIda.Enabled = false;
             timeHoraVolta.Enabled = false;
-            tbRegião.Enabled = false;
+            nudRegião.Enabled = false;
             tbContato.Enabled = false;
         }
 
         private void rdCarona_CheckedChanged(object sender, EventArgs e)
         {
             tbTipoCarro.Hide();
-            textBox3.Hide();
+            tbPlaca.Hide();
             nudCaronas.Hide();
 
             nudPeso.Show();
@@ -70,14 +70,14 @@ namespace Caronada
             dateNascimento.Enabled = false;
             timeHoraIda.Enabled = false;
             timeHoraVolta.Enabled = false;
-            tbRegião.Enabled = false;
+            nudRegião.Enabled = false;
             tbContato.Enabled = false;
         }
 
         private void rdUsuário_CheckedChanged(object sender, EventArgs e)
         {
             tbTipoCarro.Hide();
-            textBox3.Hide();
+            tbPlaca.Hide();
             nudCaronas.Hide();
             nudPeso.Hide();
             nudAltura.Hide();
@@ -96,7 +96,7 @@ namespace Caronada
             dateNascimento.Enabled = true;
             timeHoraIda.Enabled = true;
             timeHoraVolta.Enabled = true;
-            tbRegião.Enabled = true;
+            nudRegião.Enabled = true;
             tbContato.Enabled = true;
         }
 

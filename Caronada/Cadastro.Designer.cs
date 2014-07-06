@@ -35,7 +35,7 @@
             this.tbNome = new System.Windows.Forms.TextBox();
             this.dateNascimento = new System.Windows.Forms.DateTimePicker();
             this.tbTipoCarro = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbPlaca = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.rdUsuário = new System.Windows.Forms.RadioButton();
@@ -57,20 +57,22 @@
             this.lbHoraVolta = new System.Windows.Forms.Label();
             this.timeHoraVolta = new System.Windows.Forms.DateTimePicker();
             this.lbRegião = new System.Windows.Forms.Label();
-            this.tbRegião = new System.Windows.Forms.TextBox();
             this.lbContato = new System.Windows.Forms.Label();
             this.tbContato = new System.Windows.Forms.TextBox();
             this.lbUsuárioRG = new System.Windows.Forms.Label();
             this.tbUsuárioRG = new System.Windows.Forms.TextBox();
+            this.nudRegião = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCaronas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRegião)).BeginInit();
             this.SuspendLayout();
             // 
             // tbRG
             // 
             this.tbRG.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbRG.Location = new System.Drawing.Point(76, 12);
+            this.tbRG.MaxLength = 10;
             this.tbRG.Name = "tbRG";
             this.tbRG.Size = new System.Drawing.Size(200, 20);
             this.tbRG.TabIndex = 0;
@@ -81,7 +83,7 @@
             this.rdCaroneiro.Location = new System.Drawing.Point(76, 199);
             this.rdCaroneiro.Name = "rdCaroneiro";
             this.rdCaroneiro.Size = new System.Drawing.Size(70, 17);
-            this.rdCaroneiro.TabIndex = 1;
+            this.rdCaroneiro.TabIndex = 7;
             this.rdCaroneiro.TabStop = true;
             this.rdCaroneiro.Text = "Caroneiro";
             this.rdCaroneiro.UseVisualStyleBackColor = true;
@@ -93,7 +95,7 @@
             this.rdCarona.Location = new System.Drawing.Point(152, 199);
             this.rdCarona.Name = "rdCarona";
             this.rdCarona.Size = new System.Drawing.Size(59, 17);
-            this.rdCarona.TabIndex = 2;
+            this.rdCarona.TabIndex = 8;
             this.rdCarona.TabStop = true;
             this.rdCarona.Text = "Carona";
             this.rdCarona.UseVisualStyleBackColor = true;
@@ -103,9 +105,10 @@
             // 
             this.tbNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbNome.Location = new System.Drawing.Point(76, 38);
+            this.tbNome.MaxLength = 32;
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(200, 20);
-            this.tbNome.TabIndex = 3;
+            this.tbNome.TabIndex = 1;
             // 
             // dateNascimento
             // 
@@ -115,24 +118,26 @@
             this.dateNascimento.MinDate = new System.DateTime(1996, 1, 1, 0, 0, 0, 0);
             this.dateNascimento.Name = "dateNascimento";
             this.dateNascimento.Size = new System.Drawing.Size(200, 20);
-            this.dateNascimento.TabIndex = 4;
+            this.dateNascimento.TabIndex = 2;
             this.dateNascimento.Value = new System.DateTime(1996, 1, 1, 0, 0, 0, 0);
             // 
             // tbTipoCarro
             // 
             this.tbTipoCarro.Location = new System.Drawing.Point(76, 251);
+            this.tbTipoCarro.MaxLength = 32;
             this.tbTipoCarro.Name = "tbTipoCarro";
             this.tbTipoCarro.Size = new System.Drawing.Size(200, 20);
-            this.tbTipoCarro.TabIndex = 7;
+            this.tbTipoCarro.TabIndex = 14;
             this.tbTipoCarro.Visible = false;
             // 
-            // textBox3
+            // tbPlaca
             // 
-            this.textBox3.Location = new System.Drawing.Point(76, 277);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Visible = false;
+            this.tbPlaca.Location = new System.Drawing.Point(76, 277);
+            this.tbPlaca.MaxLength = 8;
+            this.tbPlaca.Name = "tbPlaca";
+            this.tbPlaca.Size = new System.Drawing.Size(200, 20);
+            this.tbPlaca.TabIndex = 15;
+            this.tbPlaca.Visible = false;
             // 
             // btnCadastrar
             // 
@@ -151,6 +156,7 @@
             // btnVoltar
             // 
             this.btnVoltar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnVoltar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.Location = new System.Drawing.Point(114, 354);
@@ -169,7 +175,7 @@
             this.rdUsuário.Location = new System.Drawing.Point(217, 199);
             this.rdUsuário.Name = "rdUsuário";
             this.rdUsuário.Size = new System.Drawing.Size(61, 17);
-            this.rdUsuário.TabIndex = 12;
+            this.rdUsuário.TabIndex = 9;
             this.rdUsuário.TabStop = true;
             this.rdUsuário.Text = "Usuario";
             this.rdUsuário.UseVisualStyleBackColor = true;
@@ -280,7 +286,7 @@
             this.nudPeso.Location = new System.Drawing.Point(76, 252);
             this.nudPeso.Name = "nudPeso";
             this.nudPeso.Size = new System.Drawing.Size(70, 20);
-            this.nudPeso.TabIndex = 26;
+            this.nudPeso.TabIndex = 11;
             this.nudPeso.Visible = false;
             // 
             // nudAltura
@@ -288,15 +294,30 @@
             this.nudAltura.Location = new System.Drawing.Point(76, 278);
             this.nudAltura.Name = "nudAltura";
             this.nudAltura.Size = new System.Drawing.Size(70, 20);
-            this.nudAltura.TabIndex = 27;
+            this.nudAltura.TabIndex = 12;
             this.nudAltura.Visible = false;
             // 
             // nudCaronas
             // 
             this.nudCaronas.Location = new System.Drawing.Point(76, 304);
+            this.nudCaronas.Maximum = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.nudCaronas.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCaronas.Name = "nudCaronas";
             this.nudCaronas.Size = new System.Drawing.Size(70, 20);
-            this.nudCaronas.TabIndex = 28;
+            this.nudCaronas.TabIndex = 13;
+            this.nudCaronas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCaronas.Visible = false;
             // 
             // lbHoraIda
@@ -314,7 +335,7 @@
             this.timeHoraIda.Location = new System.Drawing.Point(76, 90);
             this.timeHoraIda.Name = "timeHoraIda";
             this.timeHoraIda.Size = new System.Drawing.Size(200, 20);
-            this.timeHoraIda.TabIndex = 30;
+            this.timeHoraIda.TabIndex = 3;
             // 
             // lbHoraVolta
             // 
@@ -331,7 +352,7 @@
             this.timeHoraVolta.Location = new System.Drawing.Point(76, 116);
             this.timeHoraVolta.Name = "timeHoraVolta";
             this.timeHoraVolta.Size = new System.Drawing.Size(200, 20);
-            this.timeHoraVolta.TabIndex = 32;
+            this.timeHoraVolta.TabIndex = 4;
             // 
             // lbRegião
             // 
@@ -341,13 +362,6 @@
             this.lbRegião.Size = new System.Drawing.Size(44, 13);
             this.lbRegião.TabIndex = 33;
             this.lbRegião.Text = "Região:";
-            // 
-            // tbRegião
-            // 
-            this.tbRegião.Location = new System.Drawing.Point(76, 142);
-            this.tbRegião.Name = "tbRegião";
-            this.tbRegião.Size = new System.Drawing.Size(200, 20);
-            this.tbRegião.TabIndex = 34;
             // 
             // lbContato
             // 
@@ -361,9 +375,10 @@
             // tbContato
             // 
             this.tbContato.Location = new System.Drawing.Point(76, 168);
+            this.tbContato.MaxLength = 18;
             this.tbContato.Name = "tbContato";
             this.tbContato.Size = new System.Drawing.Size(200, 20);
-            this.tbContato.TabIndex = 36;
+            this.tbContato.TabIndex = 6;
             // 
             // lbUsuárioRG
             // 
@@ -378,21 +393,31 @@
             // tbUsuárioRG
             // 
             this.tbUsuárioRG.Location = new System.Drawing.Point(76, 225);
+            this.tbUsuárioRG.MaxLength = 10;
             this.tbUsuárioRG.Name = "tbUsuárioRG";
             this.tbUsuárioRG.Size = new System.Drawing.Size(200, 20);
-            this.tbUsuárioRG.TabIndex = 38;
+            this.tbUsuárioRG.TabIndex = 10;
             this.tbUsuárioRG.Visible = false;
+            // 
+            // nudRegião
+            // 
+            this.nudRegião.Location = new System.Drawing.Point(76, 143);
+            this.nudRegião.Name = "nudRegião";
+            this.nudRegião.Size = new System.Drawing.Size(70, 20);
+            this.nudRegião.TabIndex = 5;
             // 
             // Cadastro
             // 
+            this.AcceptButton = this.btnCadastrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnVoltar;
             this.ClientSize = new System.Drawing.Size(335, 413);
+            this.Controls.Add(this.nudRegião);
             this.Controls.Add(this.tbUsuárioRG);
             this.Controls.Add(this.lbUsuárioRG);
             this.Controls.Add(this.tbContato);
             this.Controls.Add(this.lbContato);
-            this.Controls.Add(this.tbRegião);
             this.Controls.Add(this.lbRegião);
             this.Controls.Add(this.timeHoraVolta);
             this.Controls.Add(this.lbHoraVolta);
@@ -414,7 +439,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.rdUsuário);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbPlaca);
             this.Controls.Add(this.tbTipoCarro);
             this.Controls.Add(this.dateNascimento);
             this.Controls.Add(this.tbNome);
@@ -429,6 +454,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPeso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAltura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCaronas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRegião)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,7 +468,7 @@
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.DateTimePicker dateNascimento;
         public System.Windows.Forms.TextBox tbTipoCarro;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox tbPlaca;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.RadioButton rdUsuário;
@@ -464,10 +490,10 @@
         private System.Windows.Forms.Label lbHoraVolta;
         private System.Windows.Forms.DateTimePicker timeHoraVolta;
         private System.Windows.Forms.Label lbRegião;
-        private System.Windows.Forms.TextBox tbRegião;
         private System.Windows.Forms.Label lbContato;
         private System.Windows.Forms.TextBox tbContato;
         private System.Windows.Forms.Label lbUsuárioRG;
         private System.Windows.Forms.TextBox tbUsuárioRG;
+        private System.Windows.Forms.NumericUpDown nudRegião;
     }
 }
