@@ -112,14 +112,16 @@
             // 
             // dateNascimento
             // 
+            this.dateNascimento.CustomFormat = "";
             this.dateNascimento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateNascimento.Location = new System.Drawing.Point(76, 64);
-            this.dateNascimento.MinDate = new System.DateTime(1996, 1, 1, 0, 0, 0, 0);
+            this.dateNascimento.MaxDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateNascimento.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
             this.dateNascimento.Name = "dateNascimento";
             this.dateNascimento.Size = new System.Drawing.Size(200, 20);
             this.dateNascimento.TabIndex = 2;
-            this.dateNascimento.Value = new System.DateTime(1996, 1, 1, 0, 0, 0, 0);
+            this.dateNascimento.Value = new System.DateTime(1993, 1, 1, 0, 0, 0, 0);
             // 
             // tbTipoCarro
             // 
@@ -336,6 +338,7 @@
             this.timeHoraIda.Name = "timeHoraIda";
             this.timeHoraIda.Size = new System.Drawing.Size(200, 20);
             this.timeHoraIda.TabIndex = 3;
+            this.timeHoraIda.Value = new System.DateTime(2014, 7, 6, 0, 0, 0, 0);
             // 
             // lbHoraVolta
             // 
@@ -353,6 +356,7 @@
             this.timeHoraVolta.Name = "timeHoraVolta";
             this.timeHoraVolta.Size = new System.Drawing.Size(200, 20);
             this.timeHoraVolta.TabIndex = 4;
+            this.timeHoraVolta.Value = new System.DateTime(2014, 7, 6, 0, 0, 0, 0);
             // 
             // lbRegião
             // 

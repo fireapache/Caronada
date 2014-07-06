@@ -122,9 +122,85 @@ namespace Caronada
             else cadastrarCaroneiro();
         }
 
+        private bool formulárioUsuárioPreenchido()
+        {
+            bool preenchido = true;
+
+            if (tbRG.Text.Length < 10)
+            {
+                MessageBox.Show("RG precisa ter 10 caracteres!");
+                preenchido = false;
+            }
+
+            if (tbNome.Text.Length == 0)
+            {
+                MessageBox.Show("O usuário precisa de nome!");
+                preenchido = false;
+            }
+
+            if (tbContato.Text.Length < 8)
+            {
+                MessageBox.Show("O usuário precisa de contato (8 ou + caracteres)!");
+                preenchido = false;
+            }
+
+            return preenchido;
+        }
+
         private void cadastrarUsuário()
         {
-            MessageBox.Show("Cadastro de Usuário.");
+            if (!formulárioUsuárioPreenchido())
+            {
+                MessageBox.Show("Erro ao cadastrar usuário!");
+                return;
+            }
+
+            String command;
+            String RG, nome, dataNasc, hora_ida, hora_volta, contato, região;
+            String ano, mês, dia;
+
+            RG = tbRG.Text;
+            nome = tbNome.Text;
+
+            ano = dateNascimento.Value.Year.ToString();
+            mês = dateNascimento.Value.Month.ToString();
+            dia = dateNascimento.Value.Day.ToString();
+
+            if (mês.Length == 1) mês = mês.Insert(0, "0");
+            if (dia.Length == 1) dia = dia.Insert(0, "0");
+
+            dataNasc = ano + mês + dia;
+
+            hora_ida = timeHoraIda.Value.ToShortTimeString();
+            hora_volta = timeHoraVolta.Value.ToShortTimeString();
+            contato = tbContato.Text;
+            região = nudRegião.Value.ToString();
+
+            command = "INSERT INTO USUARIO (RG, NOME, DATA_NASC, HORA_IDA, HORA_VOLTA, CONTATO, REGIAO) VALUES (";
+            command += "'" + RG + "', ";
+            command += "'" + nome + "', ";
+            command += "'" + dataNasc + "', ";
+            command += "'" + hora_ida + "', ";
+            command += "'" + hora_volta + "', ";
+            command += "'" + contato + "', ";
+            command += região + ")";
+
+            SqlConnection sqlConnection = new SqlConnection(LoginADM.dbConString);
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+
+            sqlConnection.Open();
+
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Usuário cadastrado com sucesso!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            sqlConnection.Close();
         }
 
         private void cadastrarCarona()
