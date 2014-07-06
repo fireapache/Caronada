@@ -32,6 +32,10 @@ namespace Caronada
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+#if DEBUG
+            showOpções();
+            this.Hide();
+#else
             if (testarADM())
             {
                 showOpções();
@@ -41,6 +45,7 @@ namespace Caronada
             {
                 MessageBox.Show("ERRO DE LOGIN!");
             }
+#endif
         }
 
         private bool testarADM()
