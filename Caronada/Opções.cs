@@ -17,46 +17,29 @@ namespace Caronada
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Opções_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Cadastro cadastro = new Cadastro();
-            this.Hide();
-            cadastro.Show();
+            LoginADM.showCadastro();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnInserir_Click(object sender, EventArgs e)
         {
-            Procurar procurar = new Procurar();
-            this.Hide();
-            procurar.Show();
+            LoginADM.showInserir();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnProcurar_Click(object sender, EventArgs e)
         {
-            Inserir inserir = new Inserir();
-            this.Hide();
-            inserir.Show();
+            LoginADM.showProcurar();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Excluir excluir = new Excluir();
-            this.Hide();
-            excluir.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
+            LoginADM.showExcluir();
         }
     }
 }
