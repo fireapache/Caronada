@@ -52,7 +52,7 @@ namespace Caronada
             byte[] hash;
             MD5 hasher;
             bool loginMatch = false;
-            String dbID, dbSW;
+            String dbSW;
 
             id = tbID.Text;
             sw = tbSW.Text;
@@ -68,24 +68,18 @@ namespace Caronada
             }
 
             sqlCon = new SqlConnection(dbConString);
-            sqlComm = new SqlCommand("SELECT * FROM ADMINISTRADOR", sqlCon);
+            sqlComm = new SqlCommand("SELECT SW FROM ADMINISTRADOR WHERE ID = '" + id + "'", sqlCon);
 
             sqlCon.Open();
             dataReader = sqlComm.ExecuteReader();
 
-            while (dataReader.Read())
+            if (dataReader.Read())
             {
-                dbID = dataReader.GetString(0);
+                dbSW = dataReader.GetString(0);
 
-                if (dbID == id)
+                if (dbSW == sw)
                 {
-                    dbSW = dataReader.GetString(1);
-
-                    if (dbSW == sw)
-                    {
-                        loginMatch = true;
-                        break;
-                    }
+                    loginMatch = true;
                 }
             }
 
