@@ -111,6 +111,7 @@
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "Opções";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opções";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Opções_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

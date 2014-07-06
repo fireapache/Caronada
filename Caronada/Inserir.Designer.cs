@@ -388,6 +388,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.RG);
             this.Name = "Inserir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inserir";
             this.Load += new System.EventHandler(this.Inserir_Load);
             this.ResumeLayout(false);

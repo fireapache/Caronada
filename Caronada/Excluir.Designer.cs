@@ -166,6 +166,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.RG);
             this.Name = "Excluir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excluir";
             this.Load += new System.EventHandler(this.Excluir_Load);
             this.ResumeLayout(false);

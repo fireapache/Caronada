@@ -166,6 +166,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.RG);
             this.Name = "Procurar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Procurar";
             this.ResumeLayout(false);
             this.PerformLayout();

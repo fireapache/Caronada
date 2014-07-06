@@ -96,6 +96,7 @@
             this.Controls.Add(this.tbSW);
             this.Controls.Add(this.tbID);
             this.Name = "LoginADM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login ADM";
             this.ResumeLayout(false);
             this.PerformLayout();
