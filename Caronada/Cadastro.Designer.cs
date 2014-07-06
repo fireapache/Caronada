@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             this.tbRG = new System.Windows.Forms.TextBox();
             this.rdCaroneiro = new System.Windows.Forms.RadioButton();
-            this.Carona = new System.Windows.Forms.RadioButton();
+            this.rdCarona = new System.Windows.Forms.RadioButton();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.dateNascimento = new System.Windows.Forms.DateTimePicker();
             this.tbTipoCarro = new System.Windows.Forms.TextBox();
@@ -87,17 +87,17 @@
             this.rdCaroneiro.UseVisualStyleBackColor = true;
             this.rdCaroneiro.CheckedChanged += new System.EventHandler(this.rdCaroneiro_CheckedChanged);
             // 
-            // Carona
+            // rdCarona
             // 
-            this.Carona.AutoSize = true;
-            this.Carona.Location = new System.Drawing.Point(152, 199);
-            this.Carona.Name = "Carona";
-            this.Carona.Size = new System.Drawing.Size(59, 17);
-            this.Carona.TabIndex = 2;
-            this.Carona.TabStop = true;
-            this.Carona.Text = "Carona";
-            this.Carona.UseVisualStyleBackColor = true;
-            this.Carona.CheckedChanged += new System.EventHandler(this.rdCarona_CheckedChanged);
+            this.rdCarona.AutoSize = true;
+            this.rdCarona.Location = new System.Drawing.Point(152, 199);
+            this.rdCarona.Name = "rdCarona";
+            this.rdCarona.Size = new System.Drawing.Size(59, 17);
+            this.rdCarona.TabIndex = 2;
+            this.rdCarona.TabStop = true;
+            this.rdCarona.Text = "Carona";
+            this.rdCarona.UseVisualStyleBackColor = true;
+            this.rdCarona.CheckedChanged += new System.EventHandler(this.rdCarona_CheckedChanged);
             // 
             // tbNome
             // 
@@ -143,7 +143,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(101, 50);
             this.btnCadastrar.TabIndex = 13;
-            this.btnCadastrar.Text = "  Cadastrar";
+            this.btnCadastrar.Text = " Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -418,7 +418,7 @@
             this.Controls.Add(this.tbTipoCarro);
             this.Controls.Add(this.dateNascimento);
             this.Controls.Add(this.tbNome);
-            this.Controls.Add(this.Carona);
+            this.Controls.Add(this.rdCarona);
             this.Controls.Add(this.rdCaroneiro);
             this.Controls.Add(this.tbRG);
             this.Name = "Cadastro";
@@ -437,7 +437,7 @@
         #endregion
 
         private System.Windows.Forms.RadioButton rdCaroneiro;
-        private System.Windows.Forms.RadioButton Carona;
+        private System.Windows.Forms.RadioButton rdCarona;
         private System.Windows.Forms.TextBox tbRG;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.DateTimePicker dateNascimento;
