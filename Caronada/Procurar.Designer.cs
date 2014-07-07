@@ -39,6 +39,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.checkList = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // RG
@@ -59,6 +61,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Caroneiro";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -70,6 +73,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Carona";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // button1
             // 
@@ -94,6 +98,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Grupo";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -105,6 +110,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Usuário";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // button3
             // 
@@ -150,11 +156,36 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Tipo:";
             // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(202, 39);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(78, 17);
+            this.radioButton5.TabIndex = 26;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Comentario";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            // 
+            // checkList
+            // 
+            this.checkList.AutoSize = true;
+            this.checkList.Location = new System.Drawing.Point(12, 164);
+            this.checkList.Name = "checkList";
+            this.checkList.Size = new System.Drawing.Size(80, 17);
+            this.checkList.TabIndex = 27;
+            this.checkList.Text = "Listar todos";
+            this.checkList.UseVisualStyleBackColor = true;
+            this.checkList.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Procurar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 180);
+            this.Controls.Add(this.checkList);
+            this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -185,6 +216,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.CheckBox checkList;
 
     }
 }
