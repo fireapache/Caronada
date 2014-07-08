@@ -203,9 +203,53 @@ namespace Caronada
             sqlConnection.Close();
         }
 
+        private bool formulárioCaronaPreenchido()
+        {
+            bool preenchido = true;
+
+            if (tbUsuárioRG.Text.Length < 10)
+            {
+                MessageBox.Show("RG de usuário incompleto!");
+                preenchido = false;
+            }
+
+            return preenchido;
+        }
+
         private void cadastrarCarona()
         {
-            MessageBox.Show("Cadastro de Carona.");
+            if (!formulárioCaronaPreenchido())
+            {
+                MessageBox.Show("Erro ao cadastrar carona!");
+                return;
+            }
+
+            String command;
+            String RG, peso, altura;
+
+            RG = tbUsuárioRG.Text;
+            peso = nudPeso.Value.ToString();
+            altura = nudAltura.Value.ToString();
+
+            command = "INSERT INTO CARONA (RG, PESO, ALTURA) VALUES (";
+            command += "'" + RG + "', ";
+            command += peso + ", ";
+            command += altura + ")";
+
+            SqlConnection sqlConnection = new SqlConnection(LoginADM.dbConString);
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Carona cadastrado com sucesso!");
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void cadastrarCaroneiro()
