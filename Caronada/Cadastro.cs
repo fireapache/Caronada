@@ -188,19 +188,17 @@ namespace Caronada
             SqlConnection sqlConnection = new SqlConnection(LoginADM.dbConString);
             SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
 
-            sqlConnection.Open();
-
             try
             {
+                sqlConnection.Open();
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Usuário cadastrado com sucesso!");
+                sqlConnection.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-
-            sqlConnection.Close();
         }
 
         private bool formulárioCaronaPreenchido()
