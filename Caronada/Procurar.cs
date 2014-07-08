@@ -33,6 +33,7 @@ namespace Caronada
                 if (tipo == 4 && list_todos == 11) Procura.procuraComentarioTodos();
                 //if (tipo == 5) Procura.procuraGrupo(RG.Text);
                 LoginADM.showProcura();
+                
             }
             else
             {
