@@ -148,5 +148,46 @@ namespace Caronada
             hideForms();
             cadastro.Show();
         }
+
+        public static void procuraUser(String RG)
+        {
+            procura.procuraUser(RG);
+        }
+
+        public static void procuraUserTodos()
+        {
+            procura.procuraUserTodos();
+        }
+
+        public static void procuraCaroneiro(String RG)
+        {
+            procura.procuraCaroneiro(RG);
+        }
+
+        public static void procuraCaroneiroTodos()
+        {
+            procura.procuraCaroneiroTodos();
+        }
+
+        public static void procuraCarona(String RG)
+        {
+            procura.procuraCarona(RG);
+        }
+
+        public static void procuraCaronaTodos()
+        {
+            procura.procuraCaronaTodos();
+        }
+
+        public static void procuraComentario(String RG)
+        {
+            procura.procuraComentario(RG);
+        }
+
+        public static void procuraComentarioTodos()
+        {
+            procura.procuraComentarioTodos();
+        }
+
     }
 }

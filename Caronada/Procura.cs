@@ -28,7 +28,7 @@ namespace Caronada
             LoginADM.showProcurar();
         }
 
-        public static void procuraUser(String RG)
+        public void procuraUser(String RG)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -66,7 +66,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraUserTodos()
+        public void procuraUserTodos()
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -102,7 +102,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraCaroneiro(String RG)
+        public void procuraCaroneiro(String RG)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -134,7 +134,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraCaroneiroTodos()
+        public void procuraCaroneiroTodos()
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -169,7 +169,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraCarona(String RG)
+        public void procuraCarona(String RG)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -198,7 +198,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraCaronaTodos()
+        public void procuraCaronaTodos()
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -229,7 +229,7 @@ namespace Caronada
             reader.Close();
         }
         
-        public static void procuraComentario(String RG)
+        public void procuraComentario(String RG)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -260,7 +260,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraComentarioTodos()
+        public void procuraComentarioTodos()
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -293,7 +293,7 @@ namespace Caronada
             reader.Close();
         }
 
-        public static void procuraGrupo(String RG)
+        public void procuraGrupo(String RG)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
@@ -325,7 +325,7 @@ namespace Caronada
             reader.Close();
         }
         
-        public static void procuraGrupoTodos()
+        public void procuraGrupoTodos()
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;

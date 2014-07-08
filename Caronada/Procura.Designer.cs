@@ -60,20 +60,20 @@
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            RG,
-            NOME,
-            NASCIMENTO,
-            IDA,
-            VOLTA,
-            CONTATO,
-            REGIÃO});
-            listView1.Location = new System.Drawing.Point(0, 0);
-            listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(552, 255);
-            listView1.TabIndex = 3;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.RG,
+            this.NOME,
+            this.NASCIMENTO,
+            this.IDA,
+            this.VOLTA,
+            this.CONTATO,
+            this.REGIÃO});
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(552, 255);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // RG
             // 
@@ -110,17 +110,17 @@
             // 
             // listView2
             // 
-            listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            columnHeader1,
-            columnHeader2,
-            columnHeader3,
-            columnHeader4});
-            listView2.Location = new System.Drawing.Point(0, 0);
-            listView2.Name = "listView2";
-            listView2.Size = new System.Drawing.Size(552, 255);
-            listView2.TabIndex = 4;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView2.Location = new System.Drawing.Point(0, 0);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(552, 255);
+            this.listView2.TabIndex = 4;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -168,11 +168,11 @@
         private System.Windows.Forms.ColumnHeader VOLTA;
         private System.Windows.Forms.ColumnHeader CONTATO;
         private System.Windows.Forms.ColumnHeader REGIÃO;
-        private static System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private static System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
