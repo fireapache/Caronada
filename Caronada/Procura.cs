@@ -56,14 +56,14 @@ namespace Caronada
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
                 }
-                
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraUserTodos()
@@ -92,14 +92,15 @@ namespace Caronada
 
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
+
+                    conn.Close();
+                    reader.Close();
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraCaroneiro(String RG)
@@ -124,14 +125,15 @@ namespace Caronada
 
                     ListViewItem lvi = new ListViewItem(lista);
                     listView2.Items.Add(lvi);
+
+                    conn.Close();
+                    reader.Close();
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraCaroneiroTodos()
@@ -159,14 +161,15 @@ namespace Caronada
 
                     ListViewItem lvi = new ListViewItem(lista);
                     listView2.Items.Add(lvi);
+
+                    conn.Close();
+                    reader.Close();
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraCarona(String RG)
@@ -189,13 +192,14 @@ namespace Caronada
                     MessageBox.Show(reader["PESO"].ToString());
                     MessageBox.Show(reader["ALTURA"].ToString());
                 }
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraCaronaTodos()
@@ -220,13 +224,14 @@ namespace Caronada
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
                 }
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
         
         public void procuraComentario(String RG)
@@ -251,13 +256,14 @@ namespace Caronada
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
                 }
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraComentarioTodos()
@@ -284,13 +290,14 @@ namespace Caronada
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
                 }
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         public void procuraGrupo(String RG)
@@ -316,13 +323,14 @@ namespace Caronada
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
                 }
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
         
         public void procuraGrupoTodos()
@@ -345,13 +353,14 @@ namespace Caronada
                     //ListViewItem lvi = new ListViewItem(lista);
                     //listView1.Items.Add(lvi);
                 }
+
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show("erro: " + e);
             }
-            conn.Close();
-            reader.Close();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
