@@ -31,13 +31,9 @@ namespace Caronada
             textBox2.Show();
             N_COMENTARIO.Show(); 
             RG.Show();
-            monthCalendar1.Show();
-            textBox3.Show();
 
             label2.Show();
             label3.Show();
-            label4.Show();
-            label5.Show();
             label6.Hide();
 
             radioButton1.Hide();
@@ -56,16 +52,13 @@ namespace Caronada
 
             label2.Hide();
             label3.Hide();
-            label4.Hide();
-            label5.Hide();
+
             label6.Show();
             label11.Hide();
             label12.Hide();
 
             textBox2.Hide();
             N_COMENTARIO.Hide();
-            monthCalendar1.Hide();
-            textBox3.Hide();
             textBox6.Hide();
             textBox5.Hide();
         }

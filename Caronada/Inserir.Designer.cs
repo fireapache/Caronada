@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inserir));
             this.RG = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Comentario = new System.Windows.Forms.RadioButton();
             this.Grupo = new System.Windows.Forms.RadioButton();
             this.N_COMENTARIO = new System.Windows.Forms.TextBox();
@@ -50,8 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,22 +73,6 @@
             this.textBox2.Size = new System.Drawing.Size(200, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(101, 136);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 5;
-            this.monthCalendar1.Visible = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Location = new System.Drawing.Point(101, 318);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Visible = false;
             // 
             // Comentario
             // 
@@ -131,7 +111,7 @@
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(19, 364);
+            this.button1.Location = new System.Drawing.Point(12, 239);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 44);
             this.button1.TabIndex = 10;
@@ -144,7 +124,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(127, 364);
+            this.button2.Location = new System.Drawing.Point(120, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 44);
             this.button2.TabIndex = 11;
@@ -223,11 +203,11 @@
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(235, 364);
+            this.button3.Location = new System.Drawing.Point(228, 239);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 44);
             this.button3.TabIndex = 21;
-            this.button3.Text = "Sair";
+            this.button3.Text = "Sair        ";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -270,27 +250,6 @@
             this.label3.Text = "Comentario:";
             this.label3.Visible = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Data:";
-            this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 318);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Hora:";
-            this.label5.Visible = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -314,7 +273,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 134);
+            this.label9.Location = new System.Drawing.Point(19, 130);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 41;
@@ -357,15 +316,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 433);
+            this.ClientSize = new System.Drawing.Size(356, 301);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -383,8 +340,6 @@
             this.Controls.Add(this.N_COMENTARIO);
             this.Controls.Add(this.Grupo);
             this.Controls.Add(this.Comentario);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.RG);
             this.Name = "Inserir";
@@ -400,8 +355,6 @@
 
         private System.Windows.Forms.TextBox RG;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.RadioButton Comentario;
         private System.Windows.Forms.RadioButton Grupo;
         private System.Windows.Forms.TextBox N_COMENTARIO;
@@ -419,8 +372,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
