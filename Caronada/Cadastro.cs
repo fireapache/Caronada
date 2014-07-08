@@ -20,14 +20,14 @@ namespace Caronada
 
         private void rdCaroneiro_CheckedChanged(object sender, EventArgs e)
         {
-            tbTipoCarro.Show();
+            tbVeículo.Show();
             tbPlaca.Show();
             nudCaronas.Show();
 
             nudPeso.Hide();
             nudAltura.Hide();
 
-            lbTipoCarro.Show();
+            lbVeículo.Show();
             lbPlaca.Show();
             lbCaronas.Show();
 
@@ -48,7 +48,7 @@ namespace Caronada
 
         private void rdCarona_CheckedChanged(object sender, EventArgs e)
         {
-            tbTipoCarro.Hide();
+            tbVeículo.Hide();
             tbPlaca.Hide();
             nudCaronas.Hide();
 
@@ -58,7 +58,7 @@ namespace Caronada
             lbPeso.Show();
             lbAltura.Show();
 
-            lbTipoCarro.Hide();
+            lbVeículo.Hide();
             lbPlaca.Hide();
             lbCaronas.Hide();
 
@@ -76,13 +76,13 @@ namespace Caronada
 
         private void rdUsuário_CheckedChanged(object sender, EventArgs e)
         {
-            tbTipoCarro.Hide();
+            tbVeículo.Hide();
             tbPlaca.Hide();
             nudCaronas.Hide();
             nudPeso.Hide();
             nudAltura.Hide();
 
-            lbTipoCarro.Hide();
+            lbVeículo.Hide();
             lbPlaca.Hide();
             lbCaronas.Hide();
             lbPeso.Hide();
@@ -250,9 +250,61 @@ namespace Caronada
             }
         }
 
+        private bool formulárioCaroneiroPreenchido()
+        {
+            bool preenchido = true;
+
+            if (tbUsuárioRG.Text.Length < 10)
+            {
+                MessageBox.Show("RG de usuário incompleto!");
+                preenchido = false;
+            }
+
+            if (tbPlaca.Text.Length < 8)
+            {
+                MessageBox.Show("Placa do carro não especificada!");
+                preenchido = false;
+            }
+
+            return preenchido;
+        }
+
         private void cadastrarCaroneiro()
         {
-            MessageBox.Show("Cadastro de Caroneiro.");
+            if (!formulárioCaroneiroPreenchido())
+            {
+                MessageBox.Show("Erro ao cadastrar caroneiro!");
+                return;
+            }
+
+            String command;
+            String RG, veículo, placa, caronas;
+
+            RG = tbUsuárioRG.Text;
+            veículo = tbVeículo.Text;
+            placa = tbPlaca.Text;
+            caronas = nudCaronas.Value.ToString();
+
+            command = "INSERT INTO CARONEIRO (RG, TIPO_VEICULO, PLACA, MAX_CARONAS) VALUES (";
+            command += "'" + RG + "', ";
+            command += "'" + veículo + "', ";
+            command += "'" + placa + "', ";
+            command += caronas + ")";
+
+            SqlConnection sqlConnection = new SqlConnection(LoginADM.dbConString);
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Caroneiro cadastrado com sucesso!");
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

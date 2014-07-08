@@ -34,7 +34,7 @@
             this.rdCarona = new System.Windows.Forms.RadioButton();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.dateNascimento = new System.Windows.Forms.DateTimePicker();
-            this.tbTipoCarro = new System.Windows.Forms.TextBox();
+            this.tbVeículo = new System.Windows.Forms.TextBox();
             this.tbPlaca = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.lbNome = new System.Windows.Forms.Label();
             this.lbNascimento = new System.Windows.Forms.Label();
             this.lbTipo = new System.Windows.Forms.Label();
-            this.lbTipoCarro = new System.Windows.Forms.Label();
+            this.lbVeículo = new System.Windows.Forms.Label();
             this.lbPlaca = new System.Windows.Forms.Label();
             this.lbCaronas = new System.Windows.Forms.Label();
             this.lbPeso = new System.Windows.Forms.Label();
@@ -123,14 +123,14 @@
             this.dateNascimento.TabIndex = 2;
             this.dateNascimento.Value = new System.DateTime(1993, 1, 1, 0, 0, 0, 0);
             // 
-            // tbTipoCarro
+            // tbVeículo
             // 
-            this.tbTipoCarro.Location = new System.Drawing.Point(76, 251);
-            this.tbTipoCarro.MaxLength = 32;
-            this.tbTipoCarro.Name = "tbTipoCarro";
-            this.tbTipoCarro.Size = new System.Drawing.Size(200, 20);
-            this.tbTipoCarro.TabIndex = 14;
-            this.tbTipoCarro.Visible = false;
+            this.tbVeículo.Location = new System.Drawing.Point(76, 251);
+            this.tbVeículo.MaxLength = 32;
+            this.tbVeículo.Name = "tbVeículo";
+            this.tbVeículo.Size = new System.Drawing.Size(200, 20);
+            this.tbVeículo.TabIndex = 11;
+            this.tbVeículo.Visible = false;
             // 
             // tbPlaca
             // 
@@ -138,7 +138,7 @@
             this.tbPlaca.MaxLength = 8;
             this.tbPlaca.Name = "tbPlaca";
             this.tbPlaca.Size = new System.Drawing.Size(200, 20);
-            this.tbPlaca.TabIndex = 15;
+            this.tbPlaca.TabIndex = 12;
             this.tbPlaca.Visible = false;
             // 
             // btnCadastrar
@@ -233,15 +233,15 @@
             this.lbTipo.TabIndex = 20;
             this.lbTipo.Text = "Tipo:";
             // 
-            // lbTipoCarro
+            // lbVeículo
             // 
-            this.lbTipoCarro.AutoSize = true;
-            this.lbTipoCarro.Location = new System.Drawing.Point(4, 254);
-            this.lbTipoCarro.Name = "lbTipoCarro";
-            this.lbTipoCarro.Size = new System.Drawing.Size(59, 13);
-            this.lbTipoCarro.TabIndex = 21;
-            this.lbTipoCarro.Text = "Tipo Carro:";
-            this.lbTipoCarro.Visible = false;
+            this.lbVeículo.AutoSize = true;
+            this.lbVeículo.Location = new System.Drawing.Point(4, 254);
+            this.lbVeículo.Name = "lbVeículo";
+            this.lbVeículo.Size = new System.Drawing.Size(47, 13);
+            this.lbVeículo.TabIndex = 21;
+            this.lbVeículo.Text = "Veículo:";
+            this.lbVeículo.Visible = false;
             // 
             // lbPlaca
             // 
@@ -434,7 +434,7 @@
             this.Controls.Add(this.lbPeso);
             this.Controls.Add(this.lbCaronas);
             this.Controls.Add(this.lbPlaca);
-            this.Controls.Add(this.lbTipoCarro);
+            this.Controls.Add(this.lbVeículo);
             this.Controls.Add(this.lbTipo);
             this.Controls.Add(this.lbNascimento);
             this.Controls.Add(this.lbNome);
@@ -444,7 +444,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.rdUsuário);
             this.Controls.Add(this.tbPlaca);
-            this.Controls.Add(this.tbTipoCarro);
+            this.Controls.Add(this.tbVeículo);
             this.Controls.Add(this.dateNascimento);
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.rdCarona);
@@ -471,7 +471,7 @@
         private System.Windows.Forms.TextBox tbRG;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.DateTimePicker dateNascimento;
-        public System.Windows.Forms.TextBox tbTipoCarro;
+        public System.Windows.Forms.TextBox tbVeículo;
         public System.Windows.Forms.TextBox tbPlaca;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnVoltar;
@@ -481,7 +481,7 @@
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbNascimento;
         private System.Windows.Forms.Label lbTipo;
-        private System.Windows.Forms.Label lbTipoCarro;
+        private System.Windows.Forms.Label lbVeículo;
         private System.Windows.Forms.Label lbPlaca;
         private System.Windows.Forms.Label lbCaronas;
         private System.Windows.Forms.Label lbPeso;
