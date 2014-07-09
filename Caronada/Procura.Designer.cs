@@ -43,6 +43,19 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            listView5 = new System.Windows.Forms.ListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // button2
@@ -61,13 +74,13 @@
             // listView1
             // 
             listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            RG,
-            NOME,
-            NASCIMENTO,
-            IDA,
-            VOLTA,
-            CONTATO,
-            REGIÃO});
+            this.RG,
+            this.NOME,
+            this.NASCIMENTO,
+            this.IDA,
+            this.VOLTA,
+            this.CONTATO,
+            this.REGIÃO});
             listView1.Location = new System.Drawing.Point(0, 0);
             listView1.Name = "listView1";
             listView1.Size = new System.Drawing.Size(552, 255);
@@ -111,10 +124,10 @@
             // listView2
             // 
             listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            columnHeader1,
-            columnHeader2,
-            columnHeader3,
-            columnHeader4});
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
             listView2.Location = new System.Drawing.Point(0, 0);
             listView2.Name = "listView2";
             listView2.Size = new System.Drawing.Size(552, 255);
@@ -142,11 +155,101 @@
             this.columnHeader4.Text = "CARONAS";
             this.columnHeader4.Width = 128;
             // 
+            // listView3
+            // 
+            listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
+            listView3.Location = new System.Drawing.Point(0, 0);
+            listView3.Name = "listView3";
+            listView3.Size = new System.Drawing.Size(552, 255);
+            listView3.TabIndex = 5;
+            listView3.UseCompatibleStateImageBehavior = false;
+            listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "RG";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "PESO";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "ALTURA";
+            // 
+            // listView4
+            // 
+            listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            listView4.Location = new System.Drawing.Point(0, 0);
+            listView4.Name = "listView4";
+            listView4.Size = new System.Drawing.Size(552, 255);
+            listView4.TabIndex = 6;
+            listView4.UseCompatibleStateImageBehavior = false;
+            listView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "RG";
+            this.columnHeader8.Width = 102;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "N_COMENTARIO";
+            this.columnHeader9.Width = 102;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "COMENTARIO";
+            this.columnHeader10.Width = 93;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "DATA";
+            this.columnHeader11.Width = 97;
+            // 
+            // listView5
+            // 
+            listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14});
+            listView5.Location = new System.Drawing.Point(0, 0);
+            listView5.Name = "listView5";
+            listView5.Size = new System.Drawing.Size(552, 255);
+            listView5.TabIndex = 7;
+            listView5.UseCompatibleStateImageBehavior = false;
+            listView5.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "ID";
+            this.columnHeader12.Width = 97;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "BAIRRO";
+            this.columnHeader13.Width = 106;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "REFERENCIA";
+            this.columnHeader14.Width = 109;
+            // 
             // Procura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 338);
+            this.ClientSize = new System.Drawing.Size(752, 338);
+            this.Controls.Add(listView5);
+            this.Controls.Add(listView4);
+            this.Controls.Add(listView3);
             this.Controls.Add(listView2);
             this.Controls.Add(listView1);
             this.Controls.Add(this.button2);
@@ -168,11 +271,24 @@
         private System.Windows.Forms.ColumnHeader VOLTA;
         private System.Windows.Forms.ColumnHeader CONTATO;
         private System.Windows.Forms.ColumnHeader REGIÃO;
-        private static System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private static System.Windows.Forms.ListView listView3;
+        private static System.Windows.Forms.ListView listView2;
         private static System.Windows.Forms.ListView listView1;
+        private static System.Windows.Forms.ListView listView4;
+        private static System.Windows.Forms.ListView listView5;
     }
 }

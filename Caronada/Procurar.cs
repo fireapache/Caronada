@@ -23,17 +23,23 @@ namespace Caronada
         {
             if (tipo != 0)
             {
-                if (tipo == 1 && list_todos == 0) Procura.procuraUser(RG.Text);
-                if (tipo == 1 && list_todos == 11) Procura.procuraUserTodos();
-                if (tipo == 2 && list_todos == 0) Procura.procuraCaroneiro(RG.Text);
-                if (tipo == 2 && list_todos == 11) Procura.procuraCaroneiroTodos();
-                if (tipo == 3 && list_todos == 0) Procura.procuraCarona(RG.Text);
-                if (tipo == 3 && list_todos == 11) Procura.procuraCaronaTodos();
-                if (tipo == 4 && list_todos == 0) Procura.procuraComentario(RG.Text);
-                if (tipo == 4 && list_todos == 11) Procura.procuraComentarioTodos();
-                //if (tipo == 5) Procura.procuraGrupo(RG.Text);
-                LoginADM.showProcura();
-                
+                if (RG.TextLength == 10 || list_todos == 11)
+                {
+                    if (tipo == 1 && list_todos == 0) Procura.procuraUser(RG.Text);
+                    if (tipo == 1 && list_todos == 11) Procura.procuraUserTodos();
+                    if (tipo == 2 && list_todos == 0) Procura.procuraCaroneiro(RG.Text);
+                    if (tipo == 2 && list_todos == 11) Procura.procuraCaroneiroTodos();
+                    if (tipo == 3 && list_todos == 0) Procura.procuraCarona(RG.Text);
+                    if (tipo == 3 && list_todos == 11) Procura.procuraCaronaTodos();
+                    if (tipo == 4 && list_todos == 0) Procura.procuraComentario(RG.Text);
+                    if (tipo == 4 && list_todos == 11) Procura.procuraComentarioTodos();
+                    //if (tipo == 5) Procura.procuraGrupo(RG.Text);
+                    LoginADM.showProcura();
+                }
+                else
+                {
+                    MessageBox.Show("RG precisa conter 10 caracteres!!");
+                }
             }
             else
             {
@@ -62,6 +68,7 @@ namespace Caronada
             else
             {
                 RG.Enabled = true;
+                list_todos = 0;
             }
         }
 

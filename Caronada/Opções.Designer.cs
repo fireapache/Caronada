@@ -46,7 +46,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(104, 52);
             this.btnCadastrar.TabIndex = 0;
-            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Text = "Cadastrar ";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -59,7 +59,7 @@
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(104, 52);
             this.btnInserir.TabIndex = 1;
-            this.btnInserir.Text = "Inserir   ";
+            this.btnInserir.Text = "Inserir       ";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -72,7 +72,7 @@
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(104, 49);
             this.btnProcurar.TabIndex = 2;
-            this.btnProcurar.Text = "Procurar";
+            this.btnProcurar.Text = "Procurar   ";
             this.btnProcurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProcurar.UseVisualStyleBackColor = true;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
@@ -83,9 +83,9 @@
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.Location = new System.Drawing.Point(12, 183);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(102, 49);
+            this.btnExcluir.Size = new System.Drawing.Size(104, 49);
             this.btnExcluir.TabIndex = 3;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "Excluir      ";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
