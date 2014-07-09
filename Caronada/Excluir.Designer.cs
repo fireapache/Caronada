@@ -38,9 +38,10 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.RG = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -72,7 +73,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(55, 62);
+            this.radioButton4.Location = new System.Drawing.Point(52, 31);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(61, 17);
             this.radioButton4.TabIndex = 29;
@@ -84,7 +85,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(131, 62);
+            this.radioButton3.Location = new System.Drawing.Point(123, 31);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(54, 17);
             this.radioButton3.TabIndex = 28;
@@ -109,7 +110,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(131, 39);
+            this.radioButton2.Location = new System.Drawing.Point(123, 8);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(59, 17);
             this.radioButton2.TabIndex = 26;
@@ -121,7 +122,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(55, 39);
+            this.radioButton1.Location = new System.Drawing.Point(52, 8);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(70, 17);
             this.radioButton1.TabIndex = 25;
@@ -147,19 +148,10 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "RG:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Tipo:";
-            // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(191, 41);
+            this.radioButton5.Location = new System.Drawing.Point(188, 8);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(78, 17);
             this.radioButton5.TabIndex = 34;
@@ -179,27 +171,38 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Controls.Add(this.radioButton5);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(272, 59);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo:";
+            // 
             // Excluir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 210);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.RG);
             this.Name = "Excluir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excluir";
             this.Load += new System.EventHandler(this.Excluir_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,8 +219,8 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox RG;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
