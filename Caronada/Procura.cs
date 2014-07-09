@@ -101,10 +101,9 @@ namespace Caronada
 
                     ListViewItem lvi = new ListViewItem(lista);
                     listView1.Items.Add(lvi);
-
-                    conn.Close();
-                    reader.Close();
                 }
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
@@ -182,9 +181,10 @@ namespace Caronada
                     ListViewItem lvi = new ListViewItem(lista);
                     listView2.Items.Add(lvi);
 
-                    conn.Close();
-                    reader.Close();
+                    
                 }
+                conn.Close();
+                reader.Close();
             }
             catch (Exception e)
             {
