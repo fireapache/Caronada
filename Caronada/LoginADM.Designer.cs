@@ -38,14 +38,15 @@
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(79, 66);
+            this.tbID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbID.Location = new System.Drawing.Point(88, 26);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(159, 20);
             this.tbID.TabIndex = 0;
             // 
             // tbSW
             // 
-            this.tbSW.Location = new System.Drawing.Point(79, 92);
+            this.tbSW.Location = new System.Drawing.Point(88, 52);
             this.tbSW.MaxLength = 32;
             this.tbSW.Name = "tbSW";
             this.tbSW.PasswordChar = '-';
@@ -57,7 +58,7 @@
             // 
             this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
             this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Location = new System.Drawing.Point(79, 118);
+            this.btnEntrar.Location = new System.Drawing.Point(88, 78);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(84, 48);
             this.btnEntrar.TabIndex = 2;
@@ -69,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 69);
+            this.label1.Location = new System.Drawing.Point(21, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 3;
@@ -78,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 95);
+            this.label2.Location = new System.Drawing.Point(21, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 4;
@@ -89,7 +90,7 @@
             this.AcceptButton = this.btnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 148);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEntrar);
@@ -98,6 +99,7 @@
             this.Name = "LoginADM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login ADM";
+            this.Load += new System.EventHandler(this.LoginADM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

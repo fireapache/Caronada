@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Caronada
 {
@@ -17,118 +18,141 @@ namespace Caronada
             InitializeComponent();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Inserir_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void Caroneiro_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox2.Show();
-            N_COMENTARIO.Show(); 
-            RG.Show();
-
-            label2.Show();
-            label3.Show();
-            label6.Hide();
-
-            radioButton1.Hide();
-            radioButton2.Hide();
-            textBox8.Hide();
-            textBox7.Hide();
-            textBox4.Hide();
-            textBox5.Hide();
-            textBox6.Hide();
-        }
-
-        private void Grupo_CheckedChanged(object sender, EventArgs e)
-        {
-            radioButton1.Show();
-            radioButton2.Show();
-
-            label2.Hide();
-            label3.Hide();
-
-            label6.Show();
-            label11.Hide();
-            label12.Hide();
-
-            textBox2.Hide();
-            N_COMENTARIO.Hide();
-            textBox6.Hide();
-            textBox5.Hide();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this,"Cadastrado com Sucesso!!");
+            if (rbComentario.Checked)
+            {
+                inserirComentário();
+            }
+            else if (rbGrupo.Checked)
+            {
+                inserirRegião();
+            }
+        }
+
+        private void inserirComentário()
+        {
+            if (tbRG.Text.Length != 10)
+            {
+                MessageBox.Show("RG incompleto!");
+                return;
+            }
+
+            if (tbComentário.Text.Length == 0)
+            {
+                MessageBox.Show("Adicionar comentário!");
+                return;
+            }
+
+            String command;
+            String RG, comentário, nComentário;
+            Random random = new Random();
+
+            RG = tbRG.Text;
+            comentário = tbComentário.Text;
+            nComentário = random.Next(1000000).ToString();
+
+            command = "INSERT INTO COMENTARIO (RG, N_COMENTARIO, COMENTARIO, DATA) VALUES (";
+            command += "'" + RG + "', ";
+            command += nComentário + ", ";
+            command += "'" + comentário + "', ";
+            command += "'20140709')";
+
+            SqlConnection sqlConnection = new SqlConnection(LoginADM.dbConString);
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Comentário inserido com sucesso! \n\n Nº = " + nComentário.ToString());
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void inserirRegião()
+        {
+            if (tbBairro.Text.Length == 0)
+            {
+                MessageBox.Show("Adicionar Bairro!");
+                return;
+            }
+
+            String command;
+            String ID, bairro, referência;
+
+            ID = nudRegiãoID.Value.ToString();
+            bairro = tbBairro.Text;
+            referência = tbReferência.Text;
+
+            command = "INSERT INTO REGIAO (ID, BAIRRO, REFERENCIA) VALUES (";
+            command += ID + ", ";
+            command += "'" + bairro + "', ";
+            command += "'" + referência + "')";
+
+            SqlConnection sqlConnection = new SqlConnection(LoginADM.dbConString);
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Região inserida com sucesso!");
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Opções op = new Opções();
-            this.Hide();
-            op.Show();
+            LoginADM.showOpções();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void Região_CheckedChanged(object sender, EventArgs e)
         {
-            textBox8.Show();
-            textBox7.Show();
-            textBox4.Show();
+            lbRG.Hide();
+            tbRG.Hide();
+            lbComentário.Hide();
+            tbComentário.Hide();
 
-            label6.Show();
-            label7.Show();
-            label8.Show();
-            label9.Show();
-            label10.Show();
-
-            label11.Hide();
-            label12.Hide();
-
-            textBox5.Hide();
-            textBox6.Hide();
+            lbRegiãoID.Show();
+            nudRegiãoID.Show();
+            lbBairro.Show();
+            tbBairro.Show();
+            lbReferência.Show();
+            tbReferência.Show();
         }
 
-        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        private void Comentario_CheckedChanged(object sender, EventArgs e)
         {
-            textBox5.Show();
-            textBox6.Show();
+            lbRG.Show();
+            tbRG.Show();
+            lbComentário.Show();
+            tbComentário.Show();
 
-            label11.Show();
-            label12.Show();
-
-            textBox7.Hide();
-            textBox4.Hide();
-            textBox8.Hide();
-
-            label10.Hide();
-            label7.Hide();
-            label9.Hide();
+            lbRegiãoID.Hide();
+            nudRegiãoID.Hide();
+            lbBairro.Hide();
+            tbBairro.Hide();
+            lbReferência.Hide();
+            tbReferência.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Application.Exit();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void Inserir_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

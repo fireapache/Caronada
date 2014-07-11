@@ -20,6 +20,7 @@ namespace Caronada
         private static Inserir inserir;
         private static Excluir excluir;
         private static Cadastro cadastro;
+        private static LoginADM loginADM;
 
         public LoginADM()
         {
@@ -38,6 +39,7 @@ namespace Caronada
 #else
             if (testarADM())
             {
+                opções.setADM(tbID.Text);
                 showOpções();
                 this.Hide();
             }
@@ -189,5 +191,25 @@ namespace Caronada
             procura.procuraComentarioTodos();
         }
 
+        public static void procuraRegião(String ID)
+        {
+            procura.procuraRegião(ID);
+        }
+
+        public static void procuraRegiãoTodos()
+        {
+            procura.procuraRegiãoTodos();
+        }
+
+        public static void showLoginADM()
+        {
+            hideForms();
+            loginADM.Show();
+        }
+
+        private void LoginADM_Load(object sender, EventArgs e)
+        {
+            loginADM = this;
+        }
     }
 }

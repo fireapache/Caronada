@@ -41,7 +41,9 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.checkList = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nudCR = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCR)).BeginInit();
             this.SuspendLayout();
             // 
             // RG
@@ -55,7 +57,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(49, 7);
+            this.radioButton1.Location = new System.Drawing.Point(10, 16);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(70, 17);
             this.radioButton1.TabIndex = 4;
@@ -67,7 +69,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(125, 7);
+            this.radioButton2.Location = new System.Drawing.Point(108, 16);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(59, 17);
             this.radioButton2.TabIndex = 5;
@@ -80,7 +82,7 @@
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 103);
+            this.button1.Location = new System.Drawing.Point(12, 115);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 43);
             this.button1.TabIndex = 6;
@@ -92,19 +94,19 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(195, 7);
+            this.radioButton3.Location = new System.Drawing.Point(108, 42);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(54, 17);
+            this.radioButton3.Size = new System.Drawing.Size(59, 17);
             this.radioButton3.TabIndex = 7;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Grupo";
+            this.radioButton3.Text = "Região";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(49, 30);
+            this.radioButton4.Location = new System.Drawing.Point(10, 42);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(61, 17);
             this.radioButton4.TabIndex = 8;
@@ -117,7 +119,7 @@
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(110, 103);
+            this.button3.Location = new System.Drawing.Point(110, 115);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 43);
             this.button3.TabIndex = 22;
@@ -130,7 +132,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(208, 103);
+            this.button2.Location = new System.Drawing.Point(208, 115);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 43);
             this.button2.TabIndex = 23;
@@ -151,7 +153,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(125, 30);
+            this.radioButton5.Location = new System.Drawing.Point(192, 16);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(78, 17);
             this.radioButton5.TabIndex = 26;
@@ -173,6 +175,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudCR);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton5);
@@ -180,10 +183,23 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Location = new System.Drawing.Point(2, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 59);
+            this.groupBox1.Size = new System.Drawing.Size(298, 71);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo:";
+            // 
+            // nudCR
+            // 
+            this.nudCR.Enabled = false;
+            this.nudCR.Location = new System.Drawing.Point(192, 42);
+            this.nudCR.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudCR.Name = "nudCR";
+            this.nudCR.Size = new System.Drawing.Size(78, 20);
+            this.nudCR.TabIndex = 36;
             // 
             // Procurar
             // 
@@ -200,8 +216,10 @@
             this.Name = "Procurar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Procurar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Procurar_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +239,7 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.CheckBox checkList;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown nudCR;
 
     }
 }

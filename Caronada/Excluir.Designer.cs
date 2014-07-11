@@ -41,7 +41,9 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nudCR = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCR)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -87,10 +89,10 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(123, 31);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(54, 17);
+            this.radioButton3.Size = new System.Drawing.Size(59, 17);
             this.radioButton3.TabIndex = 28;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Grupo";
+            this.radioButton3.Text = "Região";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -173,6 +175,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudCR);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton5);
@@ -184,6 +187,14 @@
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo:";
+            // 
+            // nudCR
+            // 
+            this.nudCR.Enabled = false;
+            this.nudCR.Location = new System.Drawing.Point(188, 31);
+            this.nudCR.Name = "nudCR";
+            this.nudCR.Size = new System.Drawing.Size(78, 20);
+            this.nudCR.TabIndex = 35;
             // 
             // Excluir
             // 
@@ -203,6 +214,7 @@
             this.Load += new System.EventHandler(this.Excluir_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +234,6 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown nudCR;
     }
 }

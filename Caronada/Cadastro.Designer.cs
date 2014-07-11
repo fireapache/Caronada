@@ -286,6 +286,11 @@
             // nudPeso
             // 
             this.nudPeso.Location = new System.Drawing.Point(76, 252);
+            this.nudPeso.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
             this.nudPeso.Name = "nudPeso";
             this.nudPeso.Size = new System.Drawing.Size(70, 20);
             this.nudPeso.TabIndex = 11;
@@ -294,6 +299,11 @@
             // nudAltura
             // 
             this.nudAltura.Location = new System.Drawing.Point(76, 278);
+            this.nudAltura.Maximum = new decimal(new int[] {
+            220,
+            0,
+            0,
+            0});
             this.nudAltura.Name = "nudAltura";
             this.nudAltura.Size = new System.Drawing.Size(70, 20);
             this.nudAltura.TabIndex = 12;
@@ -379,7 +389,7 @@
             // tbContato
             // 
             this.tbContato.Location = new System.Drawing.Point(76, 168);
-            this.tbContato.MaxLength = 18;
+            this.tbContato.MaxLength = 8;
             this.tbContato.Name = "tbContato";
             this.tbContato.Size = new System.Drawing.Size(200, 20);
             this.tbContato.TabIndex = 6;

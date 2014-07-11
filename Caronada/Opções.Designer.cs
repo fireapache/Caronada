@@ -34,6 +34,7 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.llbADM = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,12 +100,24 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // llbADM
+            // 
+            this.llbADM.AutoSize = true;
+            this.llbADM.Location = new System.Drawing.Point(501, 12);
+            this.llbADM.Name = "llbADM";
+            this.llbADM.Size = new System.Drawing.Size(98, 13);
+            this.llbADM.TabIndex = 6;
+            this.llbADM.TabStop = true;
+            this.llbADM.Text = "ADMINISTRADOR";
+            this.llbADM.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbADM_LinkClicked);
+            // 
             // Opções
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(611, 365);
+            this.Controls.Add(this.llbADM);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnProcurar);
@@ -116,6 +129,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Opções_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,5 +140,6 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel llbADM;
     }
 }

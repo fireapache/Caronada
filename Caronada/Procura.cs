@@ -268,11 +268,11 @@ namespace Caronada
             }
         }
         
-        public void procuraComentario(String RG)
+        public void procuraComentario(String ID)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
-            string query = "SELECT * FROM COMENTARIO WHERE RG = " + "" + RG + "";
+            string query = "SELECT * FROM COMENTARIO WHERE N_COMENTARIO = " + ID;
             string[] lista = new string[7];
             listView1.Hide();
             listView2.Hide();
@@ -291,6 +291,7 @@ namespace Caronada
                     lista[0] = reader["RG"].ToString();
                     lista[1] = reader["N_COMENTARIO"].ToString();
                     lista[2] = reader["COMENTARIO"].ToString();
+                    lista[3] = reader["DATA"].ToString();
 
                     ListViewItem lvi = new ListViewItem(lista);
                     listView4.Items.Add(lvi);
@@ -326,8 +327,9 @@ namespace Caronada
                 while (reader.Read())
                 {
                     lista[0] = reader["RG"].ToString();
-                    lista[1] = reader["PESO"].ToString();
-                    lista[2] = reader["ALTURA"].ToString();
+                    lista[1] = reader["N_COMENTARIO"].ToString();
+                    lista[2] = reader["COMENTARIO"].ToString();
+                    lista[3] = reader["DATA"].ToString();
 
                     ListViewItem lvi = new ListViewItem(lista);
                     listView4.Items.Add(lvi);
@@ -342,11 +344,11 @@ namespace Caronada
             }
         }
 
-        public void procuraGrupo(String RG)
+        public void procuraRegião(String ID)
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
-            string query = "SELECT * FROM GRUPO WHERE RG = " + "" + RG + "";
+            string query = "SELECT * FROM REGIAO WHERE ID = " + ID;
             string[] lista = new string[7];
             listView1.Hide();
             listView2.Hide();
@@ -362,9 +364,12 @@ namespace Caronada
                 reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-
-                    //ListViewItem lvi = new ListViewItem(lista);
-                    //listView5.Items.Add(lvi);
+                    lista[0] = reader[0].ToString();
+                    lista[1] = reader[1].ToString();
+                    lista[3] = reader[2].ToString();
+                    
+                    ListViewItem lvi = new ListViewItem(lista);
+                    listView5.Items.Add(lvi);
                 }
 
                 conn.Close();
@@ -376,11 +381,12 @@ namespace Caronada
             }
         }
         
-        public void procuraGrupoTodos()
+        public void procuraRegiãoTodos()
         {
             SqlConnection conn = null;
             SqlDataReader reader = null;
-            string query = "SELECT * FROM GRUPO ";
+            string query = "SELECT * FROM REGIAO ";
+            string[] lista = new string[7];
             listView1.Hide();
             listView2.Hide();
             listView3.Hide();
@@ -395,10 +401,12 @@ namespace Caronada
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    //lista[0] = reader["RG"].ToString();
+                    lista[0] = reader[0].ToString();
+                    lista[1] = reader[1].ToString();
+                    lista[2] = reader[2].ToString();
 
-                    //ListViewItem lvi = new ListViewItem(lista);
-                    //listView5.Items.Add(lvi);
+                    ListViewItem lvi = new ListViewItem(lista);
+                    listView5.Items.Add(lvi);
                 }
 
                 conn.Close();

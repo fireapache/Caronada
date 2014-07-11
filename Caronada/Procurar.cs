@@ -21,31 +21,32 @@ namespace Caronada
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (tipo != 0)
+            if (tipo < 4 && list_todos == 0)
             {
-                if (RG.TextLength == 10 || list_todos == 1)
-                {
-                    if (tipo == 1 && list_todos == 0) LoginADM.procuraUser(RG.Text);
-                    if (tipo == 1 && list_todos == 1) LoginADM.procuraUserTodos();
-                    if (tipo == 2 && list_todos == 0) LoginADM.procuraCaroneiro(RG.Text);
-                    if (tipo == 2 && list_todos == 1) LoginADM.procuraCaroneiroTodos();
-                    if (tipo == 3 && list_todos == 0) LoginADM.procuraCarona(RG.Text);
-                    if (tipo == 3 && list_todos == 1) LoginADM.procuraCaronaTodos();
-                    if (tipo == 4 && list_todos == 0) LoginADM.procuraComentario(RG.Text);
-                    if (tipo == 4 && list_todos == 1) LoginADM.procuraComentarioTodos();
-                    //if (tipo == 5) Procura.procuraGrupo(RG.Text);
-                    LoginADM.showProcura();
-                }
-                else
+                if (RG.Text.Length != 10)
                 {
                     MessageBox.Show("RG precisa conter 10 caracteres!!");
+                    return;
                 }
             }
-            else
+            else if (tipo == 0)
             {
                 MessageBox.Show("Escolha o tipo de usuário!!");
+                return;
             }
 
+            if (tipo == 1 && list_todos == 0) LoginADM.procuraUser(RG.Text);
+            else if (tipo == 1 && list_todos == 1) LoginADM.procuraUserTodos();
+            else if (tipo == 2 && list_todos == 0) LoginADM.procuraCaroneiro(RG.Text);
+            else if (tipo == 2 && list_todos == 1) LoginADM.procuraCaroneiroTodos();
+            else if (tipo == 3 && list_todos == 0) LoginADM.procuraCarona(RG.Text);
+            else if (tipo == 3 && list_todos == 1) LoginADM.procuraCaronaTodos();
+            else if (tipo == 4 && list_todos == 0) LoginADM.procuraComentario(nudCR.Value.ToString());
+            else if (tipo == 4 && list_todos == 1) LoginADM.procuraComentarioTodos();
+            else if (tipo == 5 && list_todos == 0) LoginADM.procuraRegião(nudCR.Value.ToString());
+            else if (tipo == 5 && list_todos == 1) LoginADM.procuraRegiãoTodos();
+
+            LoginADM.showProcura();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,11 +64,13 @@ namespace Caronada
             list_todos = 1;
             if(checkList.Checked)
             {
-                RG.Enabled = false;         
+                RG.Enabled = false;
+                nudCR.Enabled = false;
             }
             else
             {
                 RG.Enabled = true;
+                nudCR.Enabled = true;
                 list_todos = 0;
             }
         }
@@ -95,12 +98,38 @@ namespace Caronada
             tipo = 4;
             //comentario
 
+            if (radioButton5.Checked)
+            {
+                RG.Enabled = false;
+                nudCR.Enabled = true;
+            }
+            else
+            {
+                RG.Enabled = true;
+                nudCR.Enabled = false;
+            }
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             tipo = 5;
             //grupo
+
+            if (radioButton3.Checked)
+            {
+                RG.Enabled = false;
+                nudCR.Enabled = true;
+            }
+            else
+            {
+                RG.Enabled = true;
+                nudCR.Enabled = false;
+            }
+        }
+
+        private void Procurar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

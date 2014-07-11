@@ -41,5 +41,15 @@ namespace Caronada
         {
             LoginADM.showExcluir();
         }
+
+        private void llbADM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginADM.showLoginADM();
+        }
+
+        public void setADM(String ADM)
+        {
+            llbADM.Text = ADM;
+        }
     }
 }
